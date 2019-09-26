@@ -6,10 +6,10 @@ import re
 import nltk 
 
 
-consumer_key = '8y3U5ASNoOdwxReKKx4wMRCd0'
-consumer_secret = 'JjZKkPGNjBNN8n2pNLBDiwg3DHNEjUFPefEvgMNywk6SD6peRh'
-access_token = '3666714796-UPSfym7yThx6VHZYmY8NJjkkkTzUbdDJ9vuodcI'
-access_secret = 'ZI6vumAZzDPzXISg0AcK73STaqc6vwUrV7lLqRzPRlrsj'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_secret = ''
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_secret)
@@ -17,7 +17,7 @@ auth.set_access_token(access_token, access_secret)
 api = tweepy.API(auth)
 if __name__ == "__main__" :
     print("Twitter Sentiment Analyzer\n")
-    userAccount = api.user_timeline(id = '@andylieou', count = 100, include_rts = False)
+    userAccount = api.user_timeline(id = '', count = 100, include_rts = False)
     allText = ''
     for status in userAccount :
         print(status.user.name + ' said...')
